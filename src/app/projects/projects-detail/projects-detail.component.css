@@ -1,0 +1,69 @@
+/*.form {*/
+/*  position: absolute;*/
+/*  width: 400px;*/
+/*  margin:10vh auto;*/
+/*  overflow: hidden;*/
+
+/*  border: 15px solid green;*/
+/*  opacity: 100%;*/
+/*  height: 244px;*/
+/*}*/
+
+/*.form__input {*/
+/*  display: block;*/
+/*  width: 100%;*/
+/*  padding: 30px;*/
+/*  font-family: Roboto, serif;*/
+/*  -webkit-appearance: none;*/
+/*  outline: 0;*/
+/*  transition: 0.3s;*/
+/*  margin-bottom: 5px;*/
+
+/*}*/
+/*.form1{*/
+/*  width: 100%;*/
+/*  padding: 5px;*/
+/*  outline: 0;*/
+/*  transition: 0.3s;*/
+/*  margin-bottom: 10px;*/
+
+/*}*/
+/*.projectname{*/
+/*  text-align: center;*/
+/*  width:100%;*/
+/*  height:70px;*/
+
+/*}*/
+/*.form2{*/
+/*  width: 100%;*/
+/*  padding: 10px;*/
+/*  outline: 0;*/
+/*  transition: 0.3s;*/
+/*  margin-bottom: 15px;*/
+
+/*}*/
+
+/*.btn {*/
+/*  display: block;*/
+/*  width: 100%;*/
+/*  padding: 20px;*/
+/*  font-family: Roboto, serif;*/
+/*  -webkit-appearance: none;*/
+/*  outline: 0;*/
+/*  border: 0;*/
+/*  color: white;*/
+/*  background: #ABA194;*/
+/*  transition: 0.3s;*/
+/*}*/
+
+.mat-form-field {
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-left: 20px;
+}
+
+.divider{
+  width:5px;
+  height: 5px;
+  display: inline-list-item;
+}

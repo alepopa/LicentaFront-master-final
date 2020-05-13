@@ -1,0 +1,17 @@
+<table class="table">
+
+  <tr>
+    <th scope="col">Components</th>
+    <th *ngFor="let prop of properties" scope="col">{{prop}} </th>
+  </tr>
+  <tr *ngFor="let c of components">
+    <td>{{c}}</td>
+    <td *ngFor="let value of componentValuesMap.get(c)">
+      {{value ? (value | number: 0) : '' }}
+    </td>
+  </tr>
+
+  <!--    <div>{{message}}</div>-->
+</table>
+
+<!--<button mat-flat-button color="primary" (click)="showTable()"> View 1</button>-->

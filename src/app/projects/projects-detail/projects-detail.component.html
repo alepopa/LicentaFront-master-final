@@ -1,0 +1,58 @@
+<br>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-12">
+        <br>
+        <div class="form-group">
+          <label for="componentSchemasName"> Component Schema</label>
+          <input type="text" id="componentSchemasName" class="form-control" [(ngModel)]="componentSchemasName">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <button mat-raised-button color="primary" (click)="uploadFile()"> Upload</button>
+        <button mat-raised-button color="warn" (click)="cancelFile()"> Cancel</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <br>
+        <div class="form-group">
+          <input type="file" accept=".json" id="file" multiple (change)="selectFile($event)">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<mat-form-field>
+  <mat-label>Components Schema</mat-label>
+  <mat-select [(ngModel)]="selectedComponent" (ngModelChange)="componentSchemaChange(selectedComponent)">
+    <mat-option *ngFor="let eT  of componentNames" value="{{eT}}">
+      {{eT}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Quality Aspect</mat-label>
+  <mat-select [(ngModel)]="selectedAspect">
+    <mat-option *ngFor="let aT  of qualityAspects" value="{{aT}}">
+      {{aT}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+
+<app-view-component-quality-aspect *ngIf="tableViewQABool" [data]="tableViewQA"></app-view-component-quality-aspect>
+<app-view-component-quality-indicator *ngIf="tableViewQIBool" [data]="tableViewQI"></app-view-component-quality-indicator>
+<button mat-raised-button color="primary" (click)="onView1ProjectCharacterization()"> Project Characterization View 1</button>
+<div class="divider"></div>
+<button mat-raised-button color="primary" (click)="onView2ProjectCharacterization()"> Project Characterization View 2</button>
+<div class="divider"></div>
+<button mat-raised-button color="primary" (click) ="getMyComponentsSchema()">Get My components</button>
+<div>{{message}}</div>

@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button mat-raised-button color="primary" (click)="onNewProject()">New Project</button>
+  </div>
+</div>
+
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <a *ngFor="let p of projects"
+       style="cursor: pointer;"
+       [routerLink]="[p.projectId]"
+       routerLinkActive="active"
+       class="list-group-item clearfix "
+    >
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ p.projectId }}</h4>
+      </div>
+    </a>
+  </div>
+
+
+</div>
+

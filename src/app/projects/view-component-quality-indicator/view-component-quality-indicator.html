@@ -1,0 +1,30 @@
+<table class="table">
+
+  <!--  <th  scope="col">Components</th>-->
+  <!--  <tr *ngFor="let c of components">-->
+  <!--    <td>{{c}}</td>-->
+  <!--  </tr>-->
+
+  <!--  <th *ngFor="let prop of properties" scope="col">{{prop}} </th>-->
+  <!--  <tr *ngFor="let item of qaValuesArray">-->
+  <!--    <td *ngFor="let data of item">-->
+  <!--      {{data}}-->
+  <!--    </td>-->
+  <!--  </tr>-->
+
+  <!--  <div>{{message}}</div>-->
+
+  <tr>
+    <th scope="col">Components</th>
+    <th *ngFor="let prop of properties" scope="col">{{prop}} </th>
+  </tr>
+  <tr *ngFor="let c of components">
+    <td>{{c}}</td>
+    <td *ngFor="let value of componentValuesMap.get(c)">
+      {{value ? (value | number: 0) : '' }}
+    </td>
+  </tr>
+</table>
+
+
+<!--<button mat-flat-button color="primary" (click)="showTable()"> View 2</button>-->

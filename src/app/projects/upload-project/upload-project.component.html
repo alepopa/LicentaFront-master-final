@@ -1,0 +1,31 @@
+<br>
+<div class="row">
+  <div class="col-xs-12">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <br>
+        <div class="form-group">
+          <label for="projectid"> ProjectId</label>
+          <input type="text" id="projectid" class="form-control" [(ngModel)]="projectId">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <button mat-raised-button color="primary" (click)="uploadFile()"> Upload</button>
+        <button mat-raised-button color="warn" (click)="cancelFile()"> Cancel</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <br>
+        <div class="form-group">
+          <input type="file" accept=".json" id="file" multiple (change)="selectFile($event)">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
